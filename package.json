@@ -1,0 +1,35 @@
+{
+  "name": "gfcontrols",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prettierInstall": "npm install --save-dev --save-exact prettier",
+    "prettierConfig": "node --eval \"fs.writeFileSync('.prettierrc', '{}\\n')\"",
+    "prettierIgnore": "node --eval \"fs.writeFileSync('.prettierignore','# Ignore artifacts:\\nbuild\\ncoverage\\n')\"",
+    "formatterSetup": "npm run prettierInstall && npm run prettierConfig && npm run prettierIgnore && node -e \"console.log('\\x1b[31mPrettier Installed with config!\\x1b[0m');\"",
+    "format": "prettier --write \"src/**/*.{js,jsx}\"",
+    "check": "prettier --check \"src/**/*.{js,jsx}\"",
+    "eslintInstall": "npm install -D eslint@9.9.1 eslint-config-prettier@9.1.0 globals@15.9.0",
+    "eslintPluginReact": "npm i -D eslint-plugin-react@7.37.1",
+    "eslintConfig": "node --eval \"fs.writeFileSync('eslint.config.mjs', '')\"",
+    "lint": "eslint",
+    "viteInstall": "npm install -D vite@5.4.2 @vitejs/plugin-react@4.3.1",
+    "viteConfig": "node --eval \"fs.writeFileSync('vite.config.js', '')\"",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "reactInstall": "npm install react@18.3.1 react-dom@18.3.1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "eslint": "^9.9.1",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-react": "^7.37.1",
+    "globals": "^15.9.0",
+    "prettier": "3.6.2"
+  }
+}

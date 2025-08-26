@@ -1,0 +1,615 @@
+@import url(./preflight.css);
+
+@font-face {
+  font-family: "beatrice";
+  src: url("https://advantagist.github.io/beatriceExport/beatrice_regular-webfont.woff2")
+    format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "beatrice";
+  src: url("https://advantagist.github.io/beatriceExport/beatrice_semibold-webfont.woff2")
+    format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "beatrice";
+  src: url("https://advantagist.github.io/beatriceExport/beatrice_bold-webfont.woff2")
+    format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --gray100: #fafafa;
+  --gray200: #f2f2f2;
+  --gray300: #e0e0e0;
+  --white100: #ffffff;
+  --darkBlue: #0046b7;
+  --dark0_35: rgba(0, 0, 0, 0.35);
+  --dark0_5: rgba(0, 0, 0, 0.5);
+  --dark0_8: rgba(0, 0, 0, 0.8);
+  --wrapperBG: var(--gray200);
+  --beatrice: "beatrice";
+  --coral: #ff5c6a;
+
+  --bradReg: 6px;
+  --bradCaret: 5px;
+  --bradFull: 50%;
+  --bradSmall: 2px;
+  --borderInpWhite: inset 0px 0px 0px 1px #e0e0e0;
+  --borderInpWhiteHov: inset 0 0 0 1px rgba(0, 0, 0, 0.35);
+  --borderInpWhiteFocus: 1px solid var(--darkBlue);
+  --borderInoTrnsp: inset 0px 0px 0px 1px transparent;
+  --padInpMed: 12px 0 12px 12px;
+  --padCheckRadioButtonMed: 12px;
+  --fontInpMed: 400 0.75rem/1.3333 "beatrice";
+  --fontTextAreaMed: 400 0.75rem/1.666666 "beatrice";
+  --fontColInpWhite: rgba(0, 0, 0, 0.8);
+  --fontColInpWhitePlacehold: rgba(0, 0, 0, 0.5);
+  --dropDownShad: 0 5px 10px -5px rgba(0, 0, 0, 0.5), inset 0 0 0 1px #e0e0e0;
+
+  --checkmarkIcon: url(data:image/svg+xml,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M12.4731%203L14.5%204.5765L6.97912%2013L2%208.35275L3.86565%206.61145L6.80077%209.34996L12.4731%203Z%22%20fill%3D%22white%22%2F%3E%3C%2Fsvg%3E);
+
+  --checkmarkIconReadonly: url(data:image/svg+xml,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M12.4731%203L14.5%204.5765L6.97912%2013L2%208.35275L3.86565%206.61145L6.80077%209.34996L12.4731%203Z%22%20fill%3D%22%2300000080%22%2F%3E%3C%2Fsvg%3E);
+
+  --radioButtonIcon: url(data:image/svg+xml,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Ccircle%20cx%3D%228%22%20cy%3D%228%22%20r%3D%223%22%20fill%3D%22white%22%2F%3E%3C%2Fsvg%3E);
+
+  --radioButtonIconReadonly: url(data:image/svg+xml,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Ccircle%20cx%3D%228%22%20cy%3D%228%22%20r%3D%223%22%20fill%3D%22%2300000080%22%2F%3E%3C%2Fsvg%3E);
+
+  --caretButton: url(data:image/svg+xml,%3Csvg%20width%3D%228%22%20height%3D%226%22%20viewBox%3D%220%200%208%206%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M7.25259%200C7.57207%200%207.76263%200.356058%207.58541%200.62188L4.33282%205.50077C4.17449%205.73826%203.82551%205.73826%203.66718%205.50077L0.414587%200.62188C0.237372%200.356058%200.427929%200%200.747407%200L7.25259%200Z%22%20fill%3D%22%2300000080%22%2F%3E%3C%2Fsvg%3E);
+}
+
+html,
+body {
+  font-family: var(--beatrice);
+  font-size: 1rem;
+  font-weight: 400;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body * {
+  transition: outline 0s;
+}
+
+.scrollBar-bright--thin--stable {
+  scrollbar-width: thin;
+  scrollbar-gutter: stable;
+  scrollbar-color: var(--dark0_35) transparent;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 100%;
+  min-height: 100%;
+  padding: 3rem;
+  display: grid;
+  background-color: var(--wrapperBG);
+  gap: 1.5rem;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+}
+
+.sectionContainer {
+  height: auto;
+  border-radius: var(--bradReg);
+  padding: 3rem;
+  box-shadow:
+    inset 0 0 0 2px var(--white100),
+    var(--dropDownShad);
+}
+
+form fieldset {
+  padding: 0;
+  margin: 0;
+}
+
+fieldset.inputGroup:not(:first-child):not(:last-child) {
+  margin: 32px 0;
+}
+
+h3 {
+  font: 500 16px/20px var(--beatrice);
+  color: var(--dark0_8);
+  margin-bottom: 24px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--gray200);
+}
+
+.inputControl {
+  display: flex;
+  align-items: flex-start;
+  justify-content: start;
+  gap: 1.5rem;
+  width: 100%;
+  margin-bottom: 1.25rem;
+}
+
+.inputControl > label {
+  font: 0.875rem/1.14285714286 var(--beatrice);
+  letter-spacing: -0.12px;
+  color: var(--dark0_5);
+  flex: 1 0 auto;
+  min-width: 160px;
+  padding: 12px 0;
+  user-select: none;
+}
+
+/* ------- Section White ------- */
+
+.sectionWhiteTheme {
+  background-color: var(--white100);
+}
+
+.sectionGrayTheme {
+  background-color: var(--gray100);
+}
+
+/* ------- Input Text ------- */
+
+.inp--white--med,
+.textarea--white--med {
+  padding: var(--padInpMed);
+  width: 100%;
+  background-color: transparent;
+  font: var(--fontInpMed);
+  color: var(--fontColInpWhite);
+}
+
+.inp--white--med::placeholder,
+.inp--white--med:read-only {
+  color: var(--fontColInpWhitePlacehold);
+}
+
+.inp--white--med:focus {
+  outline: none;
+}
+
+/* ------- Container Input Text ------- */
+
+.cont__inp--white {
+  flex: 1 1 auto;
+  width: 100%;
+  display: flex;
+  box-shadow: var(--borderInpWhite);
+  border-radius: var(--bradReg);
+  transition: 200ms ease box-shadow;
+  background-color: var(--white100);
+  position: relative;
+}
+
+.cont__inp--white.disabled,
+.cont__inp--white.disabled:hover {
+  opacity: 30%;
+  background-color: var(--white100);
+  color: var(--dark0_5);
+  box-shadow: var(--borderInpWhite);
+}
+.cont__inp--white.readonly {
+  background-color: var(--gray100);
+}
+
+.cont__inp--white.readonly:hover {
+  background-color: var(--gray100);
+  box-shadow: var(--borderInpWhite);
+}
+
+.cont__inp--white:focus-within {
+  outline: var(--borderInpWhiteFocus);
+  outline-offset: -1px;
+}
+
+.cont__inp--white:hover {
+  box-shadow: var(--borderInpWhiteHov);
+}
+
+/* ------- Container Input Text Reset Button ------- */
+
+.cont__inp--white .inp-buttons {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+}
+
+.cont__inp--white .inpResetBtn {
+  transform: scale(0);
+  display: flex;
+  border-radius: var(--bradSmall);
+  justify-content: center;
+  align-items: center;
+  width: 0.75rem;
+  height: 0.75rem;
+  background-color: var(--gray200);
+  transition:
+    transform 150ms ease,
+    background-color 150ms ease,
+    border-radius 150ms ease;
+}
+
+.cont__inp--white .inpResetBtn > svg {
+  width: 8px;
+  fill: var(--dark0_5);
+}
+
+.cont__inp--white:hover .inpResetBtn {
+  transform: scale(1);
+}
+
+.cont__inp--white.disabled .inpResetBtn {
+  display: none;
+}
+
+.cont__inp--white.readonly .inpResetBtn {
+  display: none;
+}
+
+.cont__inp--white .inpResetBtn:hover {
+  transform: scale(1.5);
+  background-color: var(--gray300);
+  cursor: pointer;
+  border-radius: var(--bradFull);
+}
+
+.cont__inp--white .inpResetBtn:hover > svg {
+  fill: var(--dark0_8);
+}
+
+/*  ------- Text Area ------- */
+
+/*?Character capacity considerations:5000 characters ≈ 800-1000 words
+
+At ~60-80 characters per line, that's roughly 60-80 lines of text
+Average line height in textareas is about 18-20px
+
+User experience factors:
+
+Too small (< 80px): Feels cramped, users immediately need to scroll
+Too large (> 200px): Wastes space, looks overwhelming when empty
+120px sweet spot: Shows enough content to feel substantial but not overwhelming
+*/
+
+.textareaCounterContainer {
+  width: 100%;
+}
+
+.textareaCounterContainer.disabled {
+  opacity: 30%;
+}
+.textareaCounterContainer.disabled:hover .custom-textarea {
+  box-shadow: var(--borderInpWhite);
+}
+
+.textareaCounterContainer.disabled .custom-textarea .inp-buttons,
+.textareaCounterContainer.readonly .custom-textarea .inp-buttons {
+  display: none;
+}
+
+.textareaCounterContainer.readonly .custom-textarea {
+  background-color: var(--gray100);
+}
+
+.textareaCounterContainer.readonly .custom-textarea textarea {
+  color: var(--dark0_5);
+}
+
+.characterCounter {
+  color: var(--dark0_5);
+  font: 0.625rem/1.2 var(--beatrice);
+  text-align: right;
+  margin-top: 0.25rem;
+}
+
+.textarea--white--med {
+  font: var(--fontTextAreaMed);
+  resize: vertical;
+  min-height: 120px;
+  padding-right: 40px;
+}
+
+.inp-buttons--textArea {
+  position: absolute;
+  right: 12px;
+}
+
+textarea:focus-visible {
+  outline: none;
+}
+
+.charLimit {
+  color: var(--coral);
+}
+
+/* ------- Select ------- */
+.custom-select {
+  position: relative;
+  user-select: none;
+}
+
+.cont__inp--white .selectCaretBtn {
+  width: 2rem;
+  height: 2rem;
+  display: block;
+  border-radius: var(--bradCaret);
+  background-color: var(--gray200);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 200ms ease;
+}
+
+.cont__inp--white:hover .selectCaretBtn {
+  background-color: var(--gray300);
+}
+
+.custom-select .selectCaretBtn > svg {
+  transition: transform 150ms ease;
+  transform: rotate(0);
+  transform-origin: center calc(50% - 1px);
+}
+
+.custom-select.open .selectCaretBtn > svg {
+  transform: rotate(180deg);
+}
+
+.cont__inp--white .inp-buttons--select {
+  display: flex;
+  padding: 4px 4px 4px 12px;
+  align-items: center;
+  gap: 12px;
+}
+
+.selected {
+  pointer-events: none;
+  display: none;
+}
+
+.options-container {
+  right: 0;
+  max-height: 0;
+  opacity: 0;
+  background-color: transparent;
+  transition:
+    max-height 0.15s ease-in-out,
+    opacity 0.15s ease-in-out;
+  z-index: 10;
+  padding: 0 4px;
+}
+
+.dropdown-wrapper {
+  position: absolute;
+  padding: 0;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  opacity: 1;
+  overflow: hidden;
+  height: auto;
+  z-index: 10;
+  background-color: var(--white100);
+  box-shadow: var(--dropDownShad);
+  border-radius: var(--bradReg);
+  transition: padding 150ms ease;
+}
+
+.custom-select.open .options-container {
+  max-height: 200px;
+  opacity: 1;
+  overflow-y: auto;
+}
+
+.custom-select.open .dropdown-wrapper {
+  padding: 8px 0;
+}
+
+.option {
+  font: 0.75rem/1.333333 var(--beatrice);
+  color: var(--dark0_8);
+  padding: 6px 8px;
+  cursor: pointer;
+}
+
+.option:hover,
+.option.active {
+  background-color: var(--gray200);
+}
+
+.option.nothingfound {
+  color: var(--dark0_5);
+}
+
+.custom-select.disabled {
+  opacity: 30%;
+}
+
+.custom-select.disabled:hover {
+  box-shadow: var(--borderInpWhite);
+}
+
+.custom-select.disabled:hover .selectCaretBtn,
+.custom-select.readonly:hover .selectCaretBtn {
+  background-color: var(--gray200);
+}
+
+.custom-select.disabled:focus-within {
+  outline: none;
+  pointer-events: none;
+}
+
+/* ------- Checkboxes and Radio ------- */
+input[type="checkbox"],
+input[type="radio"] {
+  cursor: pointer;
+}
+
+input[type="checkbox"]:disabled,
+input[type="radio"]:disabled {
+  cursor: auto;
+}
+
+.CheckRadioFieldset {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  column-gap: 1.5rem;
+  row-gap: 0.75rem;
+  padding: 12px 0;
+}
+
+.CheckRadioFieldset.hasInBox {
+  padding: 0;
+}
+
+label.CheckRadioContainer {
+  display: flex;
+  flex: 0 1 auto;
+  align-items: flex-start;
+  gap: 0.666666em;
+  font: 0.75rem/1.333333 var(--beatrice);
+  color: var(--dark0_8);
+  user-select: none;
+  cursor: pointer;
+  width: auto;
+}
+
+.CheckRadioContainer input {
+  flex: 0 0 auto;
+  appearance: none;
+  position: relative;
+  -webkit-appearance: none;
+  margin: 0;
+  background-color: var(--white100);
+  font: inherit;
+  color: currentColor;
+  width: 1.33333em;
+  height: 1.33333em;
+  box-shadow: var(--borderInpWhite);
+  transition:
+    150ms ease box-shadow,
+    150ms ease background-color;
+  transform: translateY(-0.075em);
+}
+
+.CheckRadioContainer input[type="checkbox"] {
+  border-radius: var(--bradSmall);
+}
+
+.CheckRadioContainer input[type="radio"] {
+  border-radius: var(--bradFull);
+}
+
+.CheckRadioContainer input:checked {
+  background-color: var(--darkBlue);
+  box-shadow: var(--borderInoTrnsp);
+}
+
+.CheckRadioContainer input::after {
+  transition: all 150ms ease;
+  transform: scale(0);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  content: "";
+  overflow: hidden;
+}
+
+.CheckRadioContainer input[type="radio"]::after {
+  background: var(--radioButtonIcon);
+}
+
+.CheckRadioContainer input[type="checkbox"]::after {
+  background: var(--checkmarkIcon);
+}
+
+.CheckRadioContainer input:checked::after,
+.CheckRadioContainer input.readonly:checked::after {
+  transform: scale(1);
+}
+
+.CheckRadioContainer:hover input {
+  box-shadow: var(--borderInpWhiteHov);
+}
+.CheckRadioContainer:hover input:disabled {
+  box-shadow: var(--borderInpWhite);
+}
+
+label.CheckRadioContainer:has(input[disabled]) {
+  opacity: 30%;
+  cursor: auto;
+}
+
+.CheckRadioContainer input:focus-visible {
+  outline: var(--borderInpWhiteFocus);
+  outline-offset: 1px;
+}
+
+label.CheckRadioContainer:has(input.readonly) {
+  color: var(--dark0_5);
+}
+
+.CheckRadioContainer input.readonly {
+  background-color: var(--gray100);
+}
+
+.CheckRadioContainer input.readonly:checked {
+  background-color: var(--gray100);
+  box-shadow: var(--borderInpWhite);
+}
+
+.CheckRadioContainer:has(input.readonly) {
+  pointer-events: none;
+}
+
+.CheckRadioContainer input[type="checkbox"].readonly::after {
+  background: var(--checkmarkIconReadonly);
+}
+
+.CheckRadioContainer input[type="radio"].readonly::after {
+  background: var(--radioButtonIconReadonly);
+}
+
+/* Checkbox and Radio InBox */
+
+label.CheckRadioContainer.inBox {
+  box-shadow: var(--borderInpWhite);
+  padding: var(--padCheckRadioButtonMed);
+  border-radius: var(--bradReg);
+  transition: 200ms ease box-shadow;
+}
+
+label.CheckRadioContainer.inBox:hover {
+  box-shadow: var(--borderInpWhiteHov);
+}
+
+label.CheckRadioContainer.inBox:has(input[disabled]):hover {
+  box-shadow: var(--borderInpWhite);
+}
+
+label.CheckRadioContainer.inBox:has(input.readonly) {
+  background-color: var(--gray100);
+  color: var(--dark0_5);
+}
+
+label.CheckRadioContainer.inBox input:focus-visible {
+  outline: none;
+}
+
+label.CheckRadioContainer.inBox:focus-within,
+label.CheckRadioContainer.inBox:active {
+  outline: var(--borderInpWhiteFocus);
+  outline-offset: -1px;
+}
