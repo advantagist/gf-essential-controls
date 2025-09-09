@@ -8,20 +8,31 @@
   </head>
   <body>
     <div class="wrapper">
+      <!-- ! Bright Theme -->
       <section id="whiteTheme" class="sectionWhiteTheme sectionContainer">
+        <div class="section-header">
+          <div class="col-left">
+            <h2>Bright Theme</h2>
+            <p>
+              Use case: My Raw Materials, Modal Windowns, In Market, Trade Name
+              Library
+            </p>
+          </div>
+          <div class="col-right">
+            <span class="bg-switch">Gray Background</span>
+          </div>
+        </div>
         <form action="">
           <!-- Input Default -->
-          <fieldset class="inputGroup">
+          <div class="inputGroup">
             <h3>Input Text</h3>
             <div class="inputControl">
-              <label for="input1">Default</label>
+              <div class="fieldname">Default Medium</div>
               <div class="cont__inp--white">
                 <input
                   class="inp--white--med"
                   placeholder="Add your text here"
                   type="text"
-                  name="input1"
-                  id="input1"
                 />
                 <div class="inp-buttons">
                   <div class="inpResetBtn">
@@ -39,17 +50,68 @@
                 </div>
               </div>
             </div>
+
+            <!-- Input Default Large -->
+            <div class="inputControl">
+              <div class="fieldname">Default Large</div>
+              <div class="cont__inp--white cont__inp--white--large">
+                <input
+                  class="inp--white--med"
+                  placeholder="Add your text here"
+                  type="text"
+                />
+                <div class="inp-buttons">
+                  <div class="inpResetBtn">
+                    <svg
+                      class="deleteCross"
+                      viewBox="0 0 8 8"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M7 1.90137L4.90137 4L7 6.09863L6.09863 7L4 4.90137L1.90137 7L1 6.09863L3.09863 4L1 1.90137L1.90137 1L4 3.09863L6.09863 1L7 1.90137Z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Input Default Small -->
+            <div class="inputControl">
+              <div class="fieldname">Default Small</div>
+              <div class="cont__inp--white cont__inp--white--small">
+                <input
+                  class="inp--white--small"
+                  placeholder="Add your text here"
+                  type="text"
+                />
+                <div class="inp-buttons inp-buttons--small">
+                  <div class="inpResetBtn">
+                    <svg
+                      class="deleteCross"
+                      viewBox="0 0 8 8"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M7 1.90137L4.90137 4L7 6.09863L6.09863 7L4 4.90137L1.90137 7L1 6.09863L3.09863 4L1 1.90137L1.90137 1L4 3.09863L6.09863 1L7 1.90137Z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             <!-- Input Disabled -->
             <div class="inputControl">
-              <label for="input2">Disabled</label>
+              <div class="fieldname">Disabled</div>
               <div class="cont__inp--white disabled">
                 <input
                   disabled
                   class="inp--white--med"
                   placeholder="Add your text here"
                   type="text"
-                  name="input2"
-                  id="input2"
                 />
                 <div class="inp-buttons">
                   <div class="inpResetBtn">
@@ -70,15 +132,13 @@
 
             <!-- Input Readonly -->
             <div class="inputControl">
-              <label for="input3">Readonly</label>
+              <div class="fieldname">Readonly</div>
               <div class="cont__inp--white readonly">
                 <input
                   readonly
                   class="inp--white--med"
                   placeholder="Add your text here"
                   type="text"
-                  name="input3"
-                  id="input3"
                   value="Read Only Value"
                 />
                 <div class="inp-buttons">
@@ -97,20 +157,19 @@
                 </div>
               </div>
             </div>
-          </fieldset>
+          </div>
 
-          <!--! Text Area Default -->
-          <fieldset class="inputGroup">
+          <!-- Text Area Default -->
+          <div class="inputGroup">
             <h3>Text Area</h3>
             <div class="inputControl">
-              <label for="textarea1">Default</label>
+              <div class="fieldname">Default</div>
+
               <div class="textareaCounterContainer">
                 <div class="cont__inp--white custom-textarea">
                   <textarea
                     maxlength="5000"
-                    class="textarea--white--med scrollBar-bright--thin--stable"
-                    name="textarea1"
-                    id="textarea1"
+                    class="textarea--white--med scrollBar-white--thin--stable"
                     placeholder="Type your text here..."
                   >
  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</textarea
@@ -130,22 +189,20 @@
                     </div>
                   </div>
                 </div>
-                <div class="characterCounter">
+                <div class="characterCounter characterCounter--white">
                   0/<span class="maxIndicator">5000</span>
                 </div>
               </div>
             </div>
-            <!-- !Text Area Disabled -->
+            <!-- Text Area Disabled -->
             <div class="inputControl">
-              <label for="textarea1">Disabled</label>
+              <div class="fieldname">Disabled</div>
               <div class="textareaCounterContainer disabled">
                 <div class="cont__inp--white custom-textarea">
                   <textarea
                     disabled
                     maxlength="5000"
-                    class="textarea--white--med scrollBar-bright--thin--stable"
-                    name="textarea1"
-                    id="textarea1"
+                    class="textarea--white--med scrollBar-white--thin--stable"
                     placeholder="Type your text here..."
                   ></textarea>
                   <div class="inp-buttons inp-buttons--textArea">
@@ -164,23 +221,21 @@
                     </div>
                   </div>
                 </div>
-                <div class="characterCounter">
+                <div class="characterCounter characterCounter--white">
                   0/<span class="maxIndicator">5000</span>
                 </div>
               </div>
             </div>
 
-            <!-- !Text Area Readonly -->
+            <!-- Text Area Readonly -->
             <div class="inputControl">
-              <label for="textarea1">Disabled</label>
+              <div class="fieldname">Readonly</div>
               <div class="textareaCounterContainer readonly">
                 <div class="cont__inp--white custom-textarea">
                   <textarea
                     readonly
                     maxlength="5000"
-                    class="textarea--white--med scrollBar-bright--thin--stable"
-                    name="textarea1"
-                    id="textarea1"
+                    class="textarea--white--med scrollBar-white--thin--stable"
                     placeholder="Type your text here..."
                   >
 Some prepopulated read-only text message  </textarea
@@ -200,24 +255,24 @@ Some prepopulated read-only text message  </textarea
                     </div>
                   </div>
                 </div>
-                <div class="characterCounter">
+                <div class="characterCounter characterCounter--white">
                   0/<span class="maxIndicator">5000</span>
                 </div>
               </div>
             </div>
-          </fieldset>
+          </div>
 
-          <!-- !  Select Default -->
-          <fieldset class="inputGroup">
+          <!-- Select Default -->
+          <div class="inputGroup">
             <h3>Select</h3>
             <div class="inputControl">
-              <label for="select1">Default</label>
+              <div class="fieldname">Default</div>
               <div class="custom-select cont__inp--white" tabindex="-1">
+                <div class="selected" tabindex="-1">Select an option</div>
                 <input
-                  id="select1"
                   type="text"
                   class="search-input inp--white--med"
-                  placeholder="Select"
+                  placeholder="Start typying to select"
                 />
                 <div class="inp-buttons--select">
                   <div class="inpResetBtn inpResetBtn--select">
@@ -247,9 +302,9 @@ Some prepopulated read-only text message  </textarea
                     </svg>
                   </div>
                 </div>
-                <div class="selected" tabindex="-1">Select an option</div>
+
                 <div class="dropdown-wrapper">
-                  <div class="options-container scrollBar-bright--thin--stable">
+                  <div class="options-container scrollBar-white--thin--stable">
                     <div class="option" data-value="option1">Option One</div>
                     <div class="option" data-value="option2">Option Two</div>
                     <div class="option" data-value="option3">Option Three</div>
@@ -265,19 +320,18 @@ Some prepopulated read-only text message  </textarea
               </div>
             </div>
 
-            <!-- !  Select Disabled -->
+            <!-- Select Disabled -->
             <div class="inputControl">
-              <label for="select1">Select</label>
+              <div class="fieldname">Select</div>
               <div
                 class="custom-select disabled cont__inp--white"
                 tabindex="-1"
               >
                 <input
                   disabled
-                  id="select1"
                   type="text"
                   class="search-input inp--white--med"
-                  placeholder="Select"
+                  placeholder="Start typying to select"
                 />
                 <div class="inp-buttons--select">
                   <div class="inpResetBtn inpResetBtn--select">
@@ -309,13 +363,12 @@ Some prepopulated read-only text message  </textarea
                 </div>
               </div>
             </div>
-            <!-- !  Select Readonly -->
+            <!--  Select Readonly -->
             <div class="inputControl">
-              <label for="select3">Select</label>
+              <div class="fieldname">Readonly</div>
               <div class="custom-select readonly cont__inp--white" tabindex="0">
                 <input
                   readonly
-                  id="select31"
                   type="text"
                   class="search-input inp--white--med"
                   placeholder="Preselected Value"
@@ -350,313 +403,1037 @@ Some prepopulated read-only text message  </textarea
                 </div>
               </div>
             </div>
-          </fieldset>
+          </div>
 
-          <!-- !Default Checkbox -->
-          <fieldset class="inputGroup">
+          <!-- Select MultiChoice Default -->
+          <div class="inputGroup">
+            <h3>Select Multi Choice</h3>
+            <div class="inputControl">
+              <div class="fieldname">Default</div>
+              <div
+                class="custom-select custom-select--multi cont__inp--white"
+                tabindex="-1"
+              >
+                <div class="selected" tabindex="-1">
+                  <input
+                    type="text"
+                    class="search-input inp--white--med"
+                    placeholder="Start typying to select"
+                  />
+                </div>
+
+                <div class="inp-buttons--select">
+                  <div class="inpResetBtn inpResetBtn--select">
+                    <svg
+                      class="deleteCross"
+                      viewBox="0 0 8 8"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M7 1.90137L4.90137 4L7 6.09863L6.09863 7L4 4.90137L1.90137 7L1 6.09863L3.09863 4L1 1.90137L1.90137 1L4 3.09863L6.09863 1L7 1.90137Z"
+                      />
+                    </svg>
+                  </div>
+                  <div class="selectCaretBtn">
+                    <svg
+                      width="8"
+                      height="6"
+                      viewBox="0 0 8 6"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M7.25259 0C7.57207 0 7.76263 0.356058 7.58541 0.62188L4.33282 5.50077C4.17449 5.73826 3.82551 5.73826 3.66718 5.50077L0.414587 0.62188C0.237372 0.356058 0.427929 0 0.747407 0L7.25259 0Z"
+                        fill="#00000080"
+                      />
+                    </svg>
+                  </div>
+                </div>
+
+                <div class="dropdown-wrapper">
+                  <div class="options-container scrollBar-white--thin--stable">
+                    <div class="option" data-value="option1">
+                      <label
+                        class="CheckRadioContainer CheckRadioContainer--white CheckRadioContainer--small"
+                        ><input type="checkbox" /> Option One</label
+                      >
+                    </div>
+                    <div class="option" data-value="option2">
+                      <label
+                        class="CheckRadioContainer CheckRadioContainer--white CheckRadioContainer--small"
+                        ><input type="checkbox" /> Option Two</label
+                      >
+                    </div>
+                    <div class="option" data-value="option3">
+                      <label
+                        class="CheckRadioContainer CheckRadioContainer--white CheckRadioContainer--small"
+                        ><input type="checkbox" /> Astonishigly Long Option
+                        Three</label
+                      >
+                    </div>
+                    <div class="option" data-value="option4">
+                      <label
+                        class="CheckRadioContainer CheckRadioContainer--white CheckRadioContainer--small"
+                        ><input type="checkbox" /> Option Four</label
+                      >
+                    </div>
+                    <div class="option" data-value="option5">
+                      <label
+                        class="CheckRadioContainer CheckRadioContainer--white CheckRadioContainer--small"
+                        ><input type="checkbox" /> Option Five</label
+                      >
+                    </div>
+                    <div class="option" data-value="option6">
+                      <label
+                        class="CheckRadioContainer CheckRadioContainer--white CheckRadioContainer--small"
+                        ><input type="checkbox" /> Option Six</label
+                      >
+                    </div>
+                    <div class="option" data-value="option7">
+                      <label
+                        class="CheckRadioContainer CheckRadioContainer--white CheckRadioContainer--small"
+                        ><input type="checkbox" /> Option Seven</label
+                      >
+                    </div>
+                    <div class="option" data-value="option8">
+                      <label
+                        class="CheckRadioContainer CheckRadioContainer--white CheckRadioContainer--small"
+                        ><input type="checkbox" /> Option Eight</label
+                      >
+                    </div>
+                    <div class="option" data-value="option9">
+                      <label
+                        class="CheckRadioContainer CheckRadioContainer--white CheckRadioContainer--small"
+                        ><input type="checkbox" /> Option Nine</label
+                      >
+                    </div>
+                    <div class="option" data-value="option10">
+                      <label
+                        class="CheckRadioContainer CheckRadioContainer--white CheckRadioContainer--small"
+                        ><input type="checkbox" /> Option Ten</label
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Default Checkbox -->
+          <div class="inputGroup">
             <h3>Checkbox</h3>
             <div class="inputControl">
-              <label for="checkbox1">Default</label>
-              <fieldset class="CheckRadioFieldset">
-                <label class="CheckRadioContainer" for="checkbox1"
-                  ><input
-                    type="checkbox"
-                    name="checkboxGroup1"
-                    id="checkbox1"
-                  />
-                  Astonishingly Long Checkbox Label</label
+              <div class="fieldname">Default</div>
+              <fieldset class="CheckRadioGroup">
+                <label class="CheckRadioContainer CheckRadioContainer--white"
+                  ><input type="checkbox" /> Astonishingly Long Checkbox
+                  Label</label
                 >
-                <label class="CheckRadioContainer" for="checkbox2"
-                  ><input
-                    type="checkbox"
-                    name="checkboxGroup1"
-                    checked
-                    id="checkbox2"
-                  />
-                  Checkbox Label</label
+                <label class="CheckRadioContainer CheckRadioContainer--white"
+                  ><input type="checkbox" checked /> Checkbox Label</label
                 >
               </fieldset>
             </div>
-            <!-- !Disabled Checkbox -->
+            <!-- Disabled Checkbox -->
             <div class="inputControl">
-              <label for="checkbox3">Disabled</label>
-              <fieldset class="CheckRadioFieldset">
-                <label class="CheckRadioContainer" for="checkbox3"
-                  ><input
-                    disabled
-                    type="checkbox"
-                    name="checkboxGroup2"
-                    id="checkbox3"
-                  />
-                  Astonishingly Long Checkbox Label</label
-                >
-                <label class="CheckRadioContainer" for="checkbox4"
-                  ><input
-                    disabled
-                    type="checkbox"
-                    name="checkboxGroup2"
-                    id="checkbox4"
-                  />
+              <div class="fieldname">Disabled</div>
+              <fieldset class="CheckRadioGroup">
+                <label class="CheckRadioContainer CheckRadioContainer--white"
+                  ><input disabled type="checkbox" /> Astonishingly Long
                   Checkbox Label</label
+                >
+                <label class="CheckRadioContainer CheckRadioContainer--white"
+                  ><input disabled type="checkbox" /> Checkbox Label</label
                 >
               </fieldset>
             </div>
-            <!-- !Readonly Checkbox -->
+            <!-- Readonly Checkbox -->
             <div class="inputControl">
-              <label for="checkbox5">Readonly</label>
-              <fieldset class="CheckRadioFieldset">
-                <label class="CheckRadioContainer" for="checkbox5"
-                  ><input
-                    type="checkbox"
-                    name="checkboxGroup3"
-                    class="readonly"
-                    id="checkbox5"
-                  />
-                  Astonishingly Long Checkbox Label</label
-                >
-                <label class="CheckRadioContainer" for="checkbox6"
-                  ><input
-                    class="readonly"
-                    checked
-                    type="checkbox"
-                    name="checkboxGroup3"
-                    id="checkbox6"
-                  />
+              <div class="fieldname">Readonly</div>
+              <fieldset class="CheckRadioGroup">
+                <label class="CheckRadioContainer CheckRadioContainer--white"
+                  ><input type="checkbox" class="readonly" /> Astonishingly Long
                   Checkbox Label</label
+                >
+                <label class="CheckRadioContainer CheckRadioContainer--white"
+                  ><input class="readonly" checked type="checkbox" /> Checkbox
+                  Label</label
                 >
               </fieldset>
             </div>
-          </fieldset>
+          </div>
 
-          <!-- !Default Radiobutton -->
-          <fieldset class="inputGroup">
+          <!-- Default Radiobutton -->
+          <div class="inputGroup">
             <h3>Radiobuttons</h3>
             <div class="inputControl">
-              <label for="radiobutton1">Default</label>
-              <fieldset class="CheckRadioFieldset">
-                <label class="CheckRadioContainer" for="radiobutton1"
-                  ><input type="radio" name="radiogroup1" id="radiobutton1" />
+              <div class="fieldname">Default</div>
+              <fieldset class="CheckRadioGroup">
+                <label class="CheckRadioContainer CheckRadioContainer--white"
+                  ><input type="radio" name="radiogroup1" /> Astonishingly Long
+                  Radiobutton Label</label
+                >
+                <label class="CheckRadioContainer CheckRadioContainer--white"
+                  ><input type="radio" checked name="radiogroup1" /> Radiobutton
+                  Label</label
+                >
+              </fieldset>
+            </div>
+
+            <!-- Disabled Radiobutton -->
+            <div class="inputControl">
+              <div class="fieldname">Disabled</div>
+              <fieldset class="CheckRadioGroup">
+                <label class="CheckRadioContainer CheckRadioContainer--white"
+                  ><input disabled type="radio" name="radiogroup2" />
                   Astonishingly Long Radiobutton Label</label
                 >
-                <label class="CheckRadioContainer" for="radiobutton2"
-                  ><input
-                    type="radio"
-                    checked
-                    name="radiogroup1"
-                    id="radiobutton2"
-                  />
+                <label class="CheckRadioContainer CheckRadioContainer--white"
+                  ><input disabled type="radio" name="radiogroup2" />
                   Radiobutton Label</label
                 >
               </fieldset>
             </div>
 
-            <!-- !Disabled Radiobutton -->
+            <!-- Readonly Radiobutton -->
             <div class="inputControl">
-              <label for="radiobutton1">Disabled</label>
-              <fieldset class="CheckRadioFieldset">
-                <label class="CheckRadioContainer" for="radiobutton3"
-                  ><input
-                    disabled
-                    type="radio"
-                    name="radiogroup2"
-                    id="radiobutton3"
-                  />
+              <div class="fieldname">Readonly</div>
+              <fieldset class="CheckRadioGroup">
+                <label class="CheckRadioContainer CheckRadioContainer--white"
+                  ><input class="readonly" type="radio" name="radiogroup3" />
                   Astonishingly Long Radiobutton Label</label
                 >
-                <label class="CheckRadioContainer" for="radiobutton4"
-                  ><input
-                    disabled
-                    type="radio"
-                    name="radiogroup2"
-                    id="radiobutton4"
-                  />
-                  Radiobutton Label</label
-                >
-              </fieldset>
-            </div>
-
-            <!-- !Readonly Radiobutton -->
-            <div class="inputControl">
-              <label for="radiobutton1">Readonly</label>
-              <fieldset class="CheckRadioFieldset">
-                <label class="CheckRadioContainer" for="radiobutton5"
-                  ><input
-                    class="readonly"
-                    type="radio"
-                    name="radiogroup3"
-                    id="radiobutton5"
-                  />
-                  Astonishingly Long Radiobutton Label</label
-                >
-                <label class="CheckRadioContainer" for="radiobutton6"
+                <label class="CheckRadioContainer CheckRadioContainer--white"
                   ><input
                     checked
                     class="readonly"
                     type="radio"
                     name="radiogroup3"
-                    id="radiobutton6"
                   />
                   Radiobutton Label</label
                 >
               </fieldset>
             </div>
-          </fieldset>
+          </div>
 
-          <!-- !Default Checkbox InBox -->
-          <fieldset class="inputGroup">
+          <!-- Default Checkbox InBox -->
+          <div class="inputGroup">
             <h3>Checkbox In Box</h3>
             <div class="inputControl">
-              <label for="checkbox7">Default</label>
-              <fieldset class="CheckRadioFieldset hasInBox">
-                <label class="CheckRadioContainer inBox" for="checkbox7"
-                  ><input
-                    type="checkbox"
-                    name="checkboxGroup4"
-                    id="checkbox7"
-                  />
-                  Astonishingly Long Checkbox Label</label
+              <div class="fieldname">Default</div>
+              <fieldset class="CheckRadioGroup hasInBox">
+                <label
+                  class="CheckRadioContainer CheckRadioContainer--white inBox"
+                  ><input type="checkbox" /> Astonishingly Long Checkbox
+                  Label</label
                 >
-                <label class="CheckRadioContainer inBox" for="checkbox8"
-                  ><input
-                    type="checkbox"
-                    name="checkboxGroup4"
-                    checked
-                    id="checkbox8"
-                  />
-                  Checkbox Label</label
+                <label
+                  class="CheckRadioContainer CheckRadioContainer--white inBox"
+                  ><input type="checkbox" checked /> Checkbox Label</label
                 >
               </fieldset>
             </div>
-            <!-- !Disabled Checkbox InBox  -->
+            <!-- Disabled Checkbox InBox  -->
             <div class="inputControl">
-              <label for="checkbox9">Disabled</label>
-              <fieldset class="CheckRadioFieldset hasInBox">
-                <label class="CheckRadioContainer inBox" for="checkbox9"
-                  ><input
-                    disabled
-                    type="checkbox"
-                    name="checkboxGroup5"
-                    id="checkbox9"
-                  />
-                  Astonishingly Long Checkbox Label</label
-                >
-                <label class="CheckRadioContainer inBox" for="checkbox10"
-                  ><input
-                    disabled
-                    type="checkbox"
-                    name="checkboxGroup5"
-                    id="checkbox10"
-                  />
+              <div class="fieldname">Disabled</div>
+              <fieldset class="CheckRadioGroup hasInBox">
+                <label
+                  class="CheckRadioContainer CheckRadioContainer--white inBox"
+                  ><input disabled type="checkbox" /> Astonishingly Long
                   Checkbox Label</label
+                >
+                <label
+                  class="CheckRadioContainer CheckRadioContainer--white inBox"
+                  ><input disabled type="checkbox" /> Checkbox Label</label
                 >
               </fieldset>
             </div>
-            <!-- !Readonly Checkbox InBox -->
+            <!-- Readonly Checkbox InBox -->
             <div class="inputControl">
-              <label for="checkbox11">Readonly</label>
-              <fieldset class="CheckRadioFieldset hasInBox">
-                <label class="CheckRadioContainer inBox" for="checkbox11"
-                  ><input
-                    type="checkbox"
-                    name="checkboxGroup6"
-                    class="readonly"
-                    id="checkbox11"
-                  />
-                  Astonishingly Long Checkbox Label</label
-                >
-                <label class="CheckRadioContainer inBox" for="checkbox12"
-                  ><input
-                    class="readonly"
-                    checked
-                    type="checkbox"
-                    name="checkboxGroup6"
-                    id="checkbox12"
-                  />
+              <div class="fieldname">Readonly</div>
+              <fieldset class="CheckRadioGroup hasInBox">
+                <label
+                  class="CheckRadioContainer CheckRadioContainer-white inBox"
+                  ><input type="checkbox" class="readonly" /> Astonishingly Long
                   Checkbox Label</label
+                >
+                <label
+                  class="CheckRadioContainer CheckRadioContainer--white inBox"
+                  ><input class="readonly" checked type="checkbox" /> Checkbox
+                  Label</label
                 >
               </fieldset>
             </div>
-          </fieldset>
+          </div>
 
-          <!-- !Default Radiobutton InBox -->
-          <fieldset class="inputGroup">
+          <!-- Default Radiobutton InBox -->
+          <div class="inputGroup">
             <h3>Radiobutton In Box</h3>
             <div class="inputControl">
-              <label for="radiobutton7">Default</label>
-              <fieldset class="CheckRadioFieldset hasInBox">
-                <label class="CheckRadioContainer inBox" for="radiobutton7"
-                  ><input type="radio" name="radiogroup4" id="radiobutton7" />
+              <div class="fieldname">Default</div>
+              <fieldset class="CheckRadioGroup hasInBox">
+                <label
+                  class="CheckRadioContainer CheckRadioContainer--white inBox"
+                  ><input type="radio" name="radiogroup4" /> Astonishingly Long
+                  Radiobutton Label</label
+                >
+                <label
+                  class="CheckRadioContainer CheckRadioContainer--white inBox"
+                  ><input type="radio" checked name="radiogroup4" /> Radiobutton
+                  Label</label
+                >
+              </fieldset>
+            </div>
+
+            <!-- Disabled Radiobutton -->
+            <div class="inputControl">
+              <div class="fieldname">Disabled</div>
+              <fieldset class="CheckRadioGroup hasInBox">
+                <label
+                  class="CheckRadioContainer CheckRadioContainer--white inBox"
+                  ><input disabled type="radio" name="radiogroup5" />
                   Astonishingly Long Radiobutton Label</label
                 >
-                <label class="CheckRadioContainer inBox" for="radiobutton8"
-                  ><input
-                    type="radio"
-                    checked
-                    name="radiogroup4"
-                    id="radiobutton8"
-                  />
+                <label
+                  class="CheckRadioContainer CheckRadioContainer--white inBox"
+                  ><input disabled type="radio" name="radiogroup5" />
                   Radiobutton Label</label
                 >
               </fieldset>
             </div>
 
-            <!-- !Disabled Radiobutton -->
+            <!-- Readonly Radiobutton -->
             <div class="inputControl">
-              <label for="radiobutton9">Disabled</label>
-              <fieldset class="CheckRadioFieldset hasInBox">
-                <label class="CheckRadioContainer inBox" for="radiobutton9"
-                  ><input
-                    disabled
-                    type="radio"
-                    name="radiogroup5"
-                    id="radiobutton9"
-                  />
+              <div class="fieldname">Readonly</div>
+              <fieldset class="CheckRadioGroup hasInBox">
+                <label
+                  class="CheckRadioContainer CheckRadioContainer--white inBox"
+                  ><input class="readonly" type="radio" name="radiogroup6" />
                   Astonishingly Long Radiobutton Label</label
                 >
-                <label class="CheckRadioContainer inBox" for="radiobutton10"
-                  ><input
-                    disabled
-                    type="radio"
-                    name="radiogroup5"
-                    id="radiobutton10"
-                  />
-                  Radiobutton Label</label
-                >
-              </fieldset>
-            </div>
-
-            <!-- !Readonly Radiobutton -->
-            <div class="inputControl">
-              <label for="radiobutton11">Readonly</label>
-              <fieldset class="CheckRadioFieldset hasInBox">
-                <label class="CheckRadioContainer inBox" for="radiobutton5"
-                  ><input
-                    class="readonly"
-                    type="radio"
-                    name="radiogroup6"
-                    id="radiobutton11"
-                  />
-                  Astonishingly Long Radiobutton Label</label
-                >
-                <label class="CheckRadioContainer inBox" for="radiobutton12"
+                <label
+                  class="CheckRadioContainer CheckRadioContainer--white inBox"
                   ><input
                     checked
                     class="readonly"
                     type="radio"
                     name="radiogroup6"
-                    id="radiobutton12"
                   />
                   Radiobutton Label</label
                 >
               </fieldset>
             </div>
-          </fieldset>
+          </div>
         </form>
       </section>
-      <section
-        id="grayTheme"
-        class="sectionGrayTheme sectionContainer"
-      ></section>
+
+      <!-- ! Dark Theme -->
+
+      <section id="darkTheme" class="section--darkTheme sectionContainer">
+        <div class="section-header">
+          <div class="col-left">
+            <h2>Dark Theme</h2>
+            <p>Use case: Formula Editor</p>
+          </div>
+        </div>
+        <form action="">
+          <div class="inputGroup">
+            <h3>Input Text Floating Label</h3>
+
+            <!-- Input Default -->
+
+            <div class="inputControl">
+              <div class="fieldname">Default</div>
+              <div class="cont__inp--dark cont__inp--dark--large">
+                <input
+                  class="inp--dark--med"
+                  placeholder=""
+                  id="InputFloatingDefault"
+                  type="text"
+                />
+                <label
+                  class="floating-label floating-label--dark"
+                  for="InputFloatingDefault"
+                  >Floating Label</label
+                >
+                <div class="inp-buttons">
+                  <div class="inpResetBtn">
+                    <svg
+                      class="deleteCross"
+                      viewBox="0 0 8 8"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M7 1.90137L4.90137 4L7 6.09863L6.09863 7L4 4.90137L1.90137 7L1 6.09863L3.09863 4L1 1.90137L1.90137 1L4 3.09863L6.09863 1L7 1.90137Z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Input Disable -->
+            <div class="inputControl">
+              <div class="fieldname">Disabled</div>
+              <div class="cont__inp--dark disabled cont__inp--dark--large">
+                <input
+                  disabled
+                  class="inp--dark--med"
+                  placeholder=""
+                  type="text"
+                  id="InputFloatingDefault"
+                />
+                <label
+                  class="floating-label floating-label--dark"
+                  for="InputFloatingDisabled"
+                  >Floating Label</label
+                >
+                <div class="inp-buttons">
+                  <div class="inpResetBtn">
+                    <svg
+                      class="deleteCross"
+                      viewBox="0 0 8 8"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M7 1.90137L4.90137 4L7 6.09863L6.09863 7L4 4.90137L1.90137 7L1 6.09863L3.09863 4L1 1.90137L1.90137 1L4 3.09863L6.09863 1L7 1.90137Z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Input Readonly -->
+            <div class="inputControl">
+              <div class="fieldname">Readonly</div>
+              <div class="cont__inp--dark readonly cont__inp--dark--large">
+                <input
+                  id="InputFloatingReadonly"
+                  readonly
+                  value="Read Only Value"
+                  class="inp--dark--med"
+                  placeholder=""
+                  type="text"
+                />
+                <label
+                  class="floating-label floating-label--dark"
+                  for="InputFloatingReadonly"
+                  >Floating Label</label
+                >
+                <div class="inp-buttons">
+                  <div class="inpResetBtn">
+                    <svg
+                      class="deleteCross"
+                      viewBox="0 0 8 8"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M7 1.90137L4.90137 4L7 6.09863L6.09863 7L4 4.90137L1.90137 7L1 6.09863L3.09863 4L1 1.90137L1.90137 1L4 3.09863L6.09863 1L7 1.90137Z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="inputGroup">
+            <h3>Text Area</h3>
+
+            <!--Text Area Default -->
+            <div class="inputControl">
+              <div class="fieldname">Default</div>
+              <div
+                class="textareaCounterContainer textareaCounterContainer--dark"
+              >
+                <div class="cont__inp--dark custom-textarea">
+                  <textarea
+                    id="TextAreaFloatingDefault"
+                    placeholder=""
+                    maxlength="5000"
+                    class="textarea--dark--med scrollBar-dark--thin--stable"
+                  >
+ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</textarea
+                  >
+                  <label
+                    class="floating-label floating-label--dark"
+                    for="TextAreaFloatingDefault"
+                    >Floating Label</label
+                  >
+                  <div class="inp-buttons inp-buttons--textArea">
+                    <div class="inpResetBtn">
+                      <svg
+                        class="deleteCross"
+                        viewBox="0 0 8 8"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M7 1.90137L4.90137 4L7 6.09863L6.09863 7L4 4.90137L1.90137 7L1 6.09863L3.09863 4L1 1.90137L1.90137 1L4 3.09863L6.09863 1L7 1.90137Z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="characterCounter characterCounter--dark">
+                  0/<span class="maxIndicator">5000</span>
+                </div>
+              </div>
+            </div>
+
+            <!--Text Area Disabled -->
+            <div class="inputControl">
+              <div class="fieldname">Disabled</div>
+              <div
+                class="textareaCounterContainer textareaCounterContainer--dark"
+              >
+                <div class="cont__inp--dark custom-textarea disabled">
+                  <textarea
+                    disabled
+                    id="TextAreaFloatingDisabled"
+                    placeholder=""
+                    maxlength="5000"
+                    class="textarea--dark--med scrollBar-dark--thin--stable"
+                  ></textarea>
+                  <label
+                    class="floating-label floating-label--dark"
+                    for="TextAreaFloatingDisabled"
+                    >Floating Label</label
+                  >
+                  <div class="inp-buttons inp-buttons--textArea">
+                    <div class="inpResetBtn">
+                      <svg
+                        class="deleteCross"
+                        viewBox="0 0 8 8"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M7 1.90137L4.90137 4L7 6.09863L6.09863 7L4 4.90137L1.90137 7L1 6.09863L3.09863 4L1 1.90137L1.90137 1L4 3.09863L6.09863 1L7 1.90137Z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="characterCounter characterCounter--dark">
+                  0/<span class="maxIndicator">5000</span>
+                </div>
+              </div>
+            </div>
+
+            <!--Text Area Readonly -->
+            <div class="inputControl">
+              <div class="fieldname">Readonly</div>
+              <div
+                class="textareaCounterContainer textareaCounterContainer--dark"
+              >
+                <div class="cont__inp--dark custom-textarea readonly">
+                  <textarea
+                    readonly
+                    id="InputFloatingReadonly"
+                    placeholder=""
+                    maxlength="5000"
+                    class="textarea--dark--med scrollBar-dark--thin--stable"
+                  >
+Some prepopulated read-only text message</textarea
+                  >
+                  <label
+                    class="floating-label floating-label--dark"
+                    for="InputFloatingReadonly"
+                    >Floating Label</label
+                  >
+                  <div class="inp-buttons inp-buttons--textArea">
+                    <div class="inpResetBtn">
+                      <svg
+                        class="deleteCross"
+                        viewBox="0 0 8 8"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M7 1.90137L4.90137 4L7 6.09863L6.09863 7L4 4.90137L1.90137 7L1 6.09863L3.09863 4L1 1.90137L1.90137 1L4 3.09863L6.09863 1L7 1.90137Z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="characterCounter characterCounter--dark">
+                  0/<span class="maxIndicator">5000</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Select Default -->
+          <div class="inputGroup">
+            <h3>Select</h3>
+            <div class="inputControl">
+              <div class="fieldname">Default</div>
+              <div class="custom-select cont__inp--white" tabindex="-1">
+                <div class="selected" tabindex="-1">Select an option</div>
+                <input
+                  type="text"
+                  class="search-input inp--white--med"
+                  placeholder="Start typying to select"
+                />
+                <div class="inp-buttons--select">
+                  <div class="inpResetBtn inpResetBtn--select">
+                    <svg
+                      class="deleteCross"
+                      viewBox="0 0 8 8"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M7 1.90137L4.90137 4L7 6.09863L6.09863 7L4 4.90137L1.90137 7L1 6.09863L3.09863 4L1 1.90137L1.90137 1L4 3.09863L6.09863 1L7 1.90137Z"
+                      />
+                    </svg>
+                  </div>
+                  <div class="selectCaretBtn">
+                    <svg
+                      width="8"
+                      height="6"
+                      viewBox="0 0 8 6"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M7.25259 0C7.57207 0 7.76263 0.356058 7.58541 0.62188L4.33282 5.50077C4.17449 5.73826 3.82551 5.73826 3.66718 5.50077L0.414587 0.62188C0.237372 0.356058 0.427929 0 0.747407 0L7.25259 0Z"
+                        fill="#00000080"
+                      />
+                    </svg>
+                  </div>
+                </div>
+
+                <div class="dropdown-wrapper">
+                  <div class="options-container scrollBar-white--thin--stable">
+                    <div class="option" data-value="option1">Option One</div>
+                    <div class="option" data-value="option2">Option Two</div>
+                    <div class="option" data-value="option3">Option Three</div>
+                    <div class="option" data-value="option4">Option Four</div>
+                    <div class="option" data-value="option5">Option Five</div>
+                    <div class="option" data-value="option6">Option Six</div>
+                    <div class="option" data-value="option7">Option Seven</div>
+                    <div class="option" data-value="option8">Option Eight</div>
+                    <div class="option" data-value="option9">Option Nine</div>
+                    <div class="option" data-value="option10">Option Ten</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Select Disabled -->
+            <div class="inputControl">
+              <div class="fieldname">Select</div>
+              <div
+                class="custom-select disabled cont__inp--white"
+                tabindex="-1"
+              >
+                <input
+                  disabled
+                  type="text"
+                  class="search-input inp--white--med"
+                  placeholder="Start typying to select"
+                />
+                <div class="inp-buttons--select">
+                  <div class="inpResetBtn inpResetBtn--select">
+                    <svg
+                      class="deleteCross"
+                      viewBox="0 0 8 8"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M7 1.90137L4.90137 4L7 6.09863L6.09863 7L4 4.90137L1.90137 7L1 6.09863L3.09863 4L1 1.90137L1.90137 1L4 3.09863L6.09863 1L7 1.90137Z"
+                      />
+                    </svg>
+                  </div>
+                  <div class="selectCaretBtn">
+                    <svg
+                      width="8"
+                      height="6"
+                      viewBox="0 0 8 6"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M7.25259 0C7.57207 0 7.76263 0.356058 7.58541 0.62188L4.33282 5.50077C4.17449 5.73826 3.82551 5.73826 3.66718 5.50077L0.414587 0.62188C0.237372 0.356058 0.427929 0 0.747407 0L7.25259 0Z"
+                        fill="#00000080"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--Select Readonly -->
+            <div class="inputControl">
+              <div class="fieldname">Readonly</div>
+              <div class="custom-select readonly cont__inp--white" tabindex="0">
+                <input
+                  readonly
+                  type="text"
+                  class="search-input inp--white--med"
+                  placeholder="Preselected Value"
+                />
+                <div class="inp-buttons--select">
+                  <div class="inpResetBtn inpResetBtn--select">
+                    <svg
+                      class="deleteCross"
+                      viewBox="0 0 8 8"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M7 1.90137L4.90137 4L7 6.09863L6.09863 7L4 4.90137L1.90137 7L1 6.09863L3.09863 4L1 1.90137L1.90137 1L4 3.09863L6.09863 1L7 1.90137Z"
+                      />
+                    </svg>
+                  </div>
+                  <div class="selectCaretBtn">
+                    <svg
+                      width="8"
+                      height="6"
+                      viewBox="0 0 8 6"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M7.25259 0C7.57207 0 7.76263 0.356058 7.58541 0.62188L4.33282 5.50077C4.17449 5.73826 3.82551 5.73826 3.66718 5.50077L0.414587 0.62188C0.237372 0.356058 0.427929 0 0.747407 0L7.25259 0Z"
+                        fill="#00000080"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Select MultiChoice Default -->
+          <div class="inputGroup">
+            <h3>Select Multi Choice</h3>
+            <div class="inputControl">
+              <div class="fieldname">Default</div>
+              <div
+                class="custom-select custom-select--multi cont__inp--white"
+                tabindex="-1"
+              >
+                <div class="selected" tabindex="-1">
+                  <input
+                    type="text"
+                    class="search-input inp--white--med"
+                    placeholder="Start typying to select"
+                  />
+                </div>
+
+                <div class="inp-buttons--select">
+                  <div class="inpResetBtn inpResetBtn--select">
+                    <svg
+                      class="deleteCross"
+                      viewBox="0 0 8 8"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M7 1.90137L4.90137 4L7 6.09863L6.09863 7L4 4.90137L1.90137 7L1 6.09863L3.09863 4L1 1.90137L1.90137 1L4 3.09863L6.09863 1L7 1.90137Z"
+                      />
+                    </svg>
+                  </div>
+                  <div class="selectCaretBtn">
+                    <svg
+                      width="8"
+                      height="6"
+                      viewBox="0 0 8 6"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M7.25259 0C7.57207 0 7.76263 0.356058 7.58541 0.62188L4.33282 5.50077C4.17449 5.73826 3.82551 5.73826 3.66718 5.50077L0.414587 0.62188C0.237372 0.356058 0.427929 0 0.747407 0L7.25259 0Z"
+                        fill="#00000080"
+                      />
+                    </svg>
+                  </div>
+                </div>
+
+                <div class="dropdown-wrapper">
+                  <div class="options-container scrollBar-white--thin--stable">
+                    <div class="option" data-value="option1">
+                      <label
+                        class="CheckRadioContainer CheckRadioContainer--dark CheckRadioContainer--small"
+                        ><input type="checkbox" /> Option One</label
+                      >
+                    </div>
+                    <div class="option" data-value="option2">
+                      <label
+                        class="CheckRadioContainer CheckRadioContainer--dark CheckRadioContainer--small"
+                        ><input type="checkbox" /> Option Two</label
+                      >
+                    </div>
+                    <div class="option" data-value="option3">
+                      <label
+                        class="CheckRadioContainer CheckRadioContainer--dark CheckRadioContainer--small"
+                        ><input type="checkbox" /> Astonishigly Long Option
+                        Three</label
+                      >
+                    </div>
+                    <div class="option" data-value="option4">
+                      <label
+                        class="CheckRadioContainer CheckRadioContainer--dark CheckRadioContainer--small"
+                        ><input type="checkbox" /> Option Four</label
+                      >
+                    </div>
+                    <div class="option" data-value="option5">
+                      <label
+                        class="CheckRadioContainer CheckRadioContainer--dark CheckRadioContainer--small"
+                        ><input type="checkbox" /> Option Five</label
+                      >
+                    </div>
+                    <div class="option" data-value="option6">
+                      <label
+                        class="CheckRadioContainer CheckRadioContainer--dark CheckRadioContainer--small"
+                        ><input type="checkbox" /> Option Six</label
+                      >
+                    </div>
+                    <div class="option" data-value="option7">
+                      <label
+                        class="CheckRadioContainer CheckRadioContainer--dark CheckRadioContainer--small"
+                        ><input type="checkbox" /> Option Seven</label
+                      >
+                    </div>
+                    <div class="option" data-value="option8">
+                      <label
+                        class="CheckRadioContainer CheckRadioContainer--dark CheckRadioContainer--small"
+                        ><input type="checkbox" /> Option Eight</label
+                      >
+                    </div>
+                    <div class="option" data-value="option9">
+                      <label
+                        class="CheckRadioContainer CheckRadioContainer--dark CheckRadioContainer--small"
+                        ><input type="checkbox" /> Option Nine</label
+                      >
+                    </div>
+                    <div class="option" data-value="option10">
+                      <label
+                        class="CheckRadioContainer CheckRadioContainer--dark CheckRadioContainer--small"
+                        ><input type="checkbox" /> Option Ten</label
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Default Checkbox -->
+          <div class="inputGroup">
+            <h3>Checkbox</h3>
+            <div class="inputControl">
+              <div class="fieldname">Default</div>
+              <fieldset class="CheckRadioGroup">
+                <label class="CheckRadioContainer CheckRadioContainer--dark"
+                  ><input type="checkbox" /> Astonishingly Long Checkbox
+                  Label</label
+                >
+                <label class="CheckRadioContainer CheckRadioContainer--dark"
+                  ><input type="checkbox" checked /> Checkbox Label</label
+                >
+              </fieldset>
+            </div>
+            <!-- Disabled Checkbox -->
+            <div class="inputControl">
+              <div class="fieldname">Disabled</div>
+              <fieldset class="CheckRadioGroup">
+                <label class="CheckRadioContainer CheckRadioContainer--dark"
+                  ><input disabled type="checkbox" /> Astonishingly Long
+                  Checkbox Label</label
+                >
+                <label class="CheckRadioContainer CheckRadioContainer--dark"
+                  ><input disabled type="checkbox" /> Checkbox Label</label
+                >
+              </fieldset>
+            </div>
+            <!-- Readonly Checkbox -->
+            <div class="inputControl">
+              <div class="fieldname">Readonly</div>
+              <fieldset class="CheckRadioGroup">
+                <label class="CheckRadioContainer CheckRadioContainer--dark"
+                  ><input type="checkbox" class="readonly" /> Astonishingly Long
+                  Checkbox Label</label
+                >
+                <label class="CheckRadioContainer CheckRadioContainer--dark"
+                  ><input class="readonly" checked type="checkbox" /> Checkbox
+                  Label</label
+                >
+              </fieldset>
+            </div>
+          </div>
+
+          <!-- Default Radiobutton -->
+          <div class="inputGroup">
+            <h3>Radiobuttons</h3>
+            <div class="inputControl">
+              <div class="fieldname">Default</div>
+              <fieldset class="CheckRadioGroup">
+                <label class="CheckRadioContainer CheckRadioContainer--dark"
+                  ><input type="radio" name="radiogroup1" /> Astonishingly Long
+                  Radiobutton Label</label
+                >
+                <label class="CheckRadioContainer CheckRadioContainer--dark"
+                  ><input type="radio" checked name="radiogroup1" /> Radiobutton
+                  Label</label
+                >
+              </fieldset>
+            </div>
+
+            <!-- Disabled Radiobutton -->
+            <div class="inputControl">
+              <div class="fieldname">Disabled</div>
+              <fieldset class="CheckRadioGroup">
+                <label class="CheckRadioContainer CheckRadioContainer--dark"
+                  ><input disabled type="radio" name="radiogroup2" />
+                  Astonishingly Long Radiobutton Label</label
+                >
+                <label class="CheckRadioContainer CheckRadioContainer--dark"
+                  ><input disabled type="radio" name="radiogroup2" />
+                  Radiobutton Label</label
+                >
+              </fieldset>
+            </div>
+
+            <!-- Readonly Radiobutton -->
+            <div class="inputControl">
+              <div class="fieldname">Readonly</div>
+              <fieldset class="CheckRadioGroup">
+                <label class="CheckRadioContainer CheckRadioContainer--dark"
+                  ><input class="readonly" type="radio" name="radiogroup3" />
+                  Astonishingly Long Radiobutton Label</label
+                >
+                <label class="CheckRadioContainer CheckRadioContainer--dark"
+                  ><input
+                    checked
+                    class="readonly"
+                    type="radio"
+                    name="radiogroup3"
+                  />
+                  Radiobutton Label</label
+                >
+              </fieldset>
+            </div>
+          </div>
+
+          <!-- Default Checkbox InBox -->
+          <div class="inputGroup">
+            <h3>Checkbox In Box</h3>
+            <div class="inputControl">
+              <div class="fieldname">Default</div>
+              <fieldset class="CheckRadioGroup hasInBox">
+                <label
+                  class="CheckRadioContainer CheckRadioContainer--dark inBox"
+                  ><input type="checkbox" /> Astonishingly Long Checkbox
+                  Label</label
+                >
+                <label
+                  class="CheckRadioContainer CheckRadioContainer--dark inBox"
+                  ><input type="checkbox" checked /> Checkbox Label</label
+                >
+              </fieldset>
+            </div>
+            <!-- Disabled Checkbox InBox  -->
+            <div class="inputControl">
+              <div class="fieldname">Disabled</div>
+              <fieldset class="CheckRadioGroup hasInBox">
+                <label
+                  class="CheckRadioContainer CheckRadioContainer--dark inBox"
+                  ><input disabled type="checkbox" /> Astonishingly Long
+                  Checkbox Label</label
+                >
+                <label
+                  class="CheckRadioContainer CheckRadioContainer--dark inBox"
+                  ><input disabled type="checkbox" /> Checkbox Label</label
+                >
+              </fieldset>
+            </div>
+            <!-- Readonly Checkbox InBox -->
+            <div class="inputControl">
+              <div class="fieldname">Readonly</div>
+              <fieldset class="CheckRadioGroup hasInBox">
+                <label
+                  class="CheckRadioContainer CheckRadioContainer--dark inBox"
+                  ><input type="checkbox" class="readonly" /> Astonishingly Long
+                  Checkbox Label</label
+                >
+                <label
+                  class="CheckRadioContainer CheckRadioContainer--dark inBox"
+                  ><input class="readonly" checked type="checkbox" /> Checkbox
+                  Label</label
+                >
+              </fieldset>
+            </div>
+          </div>
+
+          <!-- Default Radiobutton InBox -->
+          <div class="inputGroup">
+            <h3>Radiobutton In Box</h3>
+            <div class="inputControl">
+              <div class="fieldname">Default</div>
+              <fieldset class="CheckRadioGroup hasInBox">
+                <label
+                  class="CheckRadioContainer CheckRadioContainer--dark inBox"
+                  ><input type="radio" name="radiogroup4" /> Astonishingly Long
+                  Radiobutton Label</label
+                >
+                <label
+                  class="CheckRadioContainer CheckRadioContainer--dark inBox"
+                  ><input type="radio" checked name="radiogroup4" /> Radiobutton
+                  Label</label
+                >
+              </fieldset>
+            </div>
+
+            <!-- Disabled Radiobutton -->
+            <div class="inputControl">
+              <div class="fieldname">Disabled</div>
+              <fieldset class="CheckRadioGroup hasInBox">
+                <label
+                  class="CheckRadioContainer CheckRadioContainer--dark inBox"
+                  ><input disabled type="radio" name="radiogroup5" />
+                  Astonishingly Long Radiobutton Label</label
+                >
+                <label
+                  class="CheckRadioContainer CheckRadioContainer--dark inBox"
+                  ><input disabled type="radio" name="radiogroup5" />
+                  Radiobutton Label</label
+                >
+              </fieldset>
+            </div>
+
+            <!-- Readonly Radiobutton -->
+            <div class="inputControl">
+              <div class="fieldname">Readonly</div>
+              <fieldset class="CheckRadioGroup hasInBox">
+                <label
+                  class="CheckRadioContainer CheckRadioContainer--dark inBox"
+                  ><input class="readonly" type="radio" name="radiogroup6" />
+                  Astonishingly Long Radiobutton Label</label
+                >
+                <label
+                  class="CheckRadioContainer CheckRadioContainer--dark inBox"
+                  ><input
+                    checked
+                    class="readonly"
+                    type="radio"
+                    name="radiogroup6"
+                  />
+                  Radiobutton Label</label
+                >
+              </fieldset>
+            </div>
+          </div>
+        </form>
+      </section>
     </div>
     <script src="script.js"></script>
   </body>
